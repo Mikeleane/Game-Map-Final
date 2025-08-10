@@ -1,20 +1,46 @@
-﻿<!doctype html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game Map</title>
-  <link rel="stylesheet" href="./dist/styles/h5p.css" />
-  <script src="./dist/main.bundle.js"></script>
+
+  <!-- H5P Standalone styles (from /dist) -->
+  <link rel="stylesheet" href="dist/styles/h5p.css" />
+
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #h5p-container { min-height: 100vh; }
+  </style>
+
+  <!-- H5P Standalone player (must exist at dist/main.bundle.js) -->
+  <script defer src="dist/main.bundle.js"></script>
 </head>
 <body>
+  <noscript>Please enable JavaScript to view this H5P.</noscript>
   <div id="h5p-container"></div>
+
   <script>
-    const { H5P } = H5PStandalone;
-    new H5P(document.getElementById("h5p-container"), {
-      h5pJsonPath: "h5p-folder",
-      frameJs: "./dist/frame.bundle.js",
-      frameCss: "./dist/styles/h5p.css"
-    });
+    (function () {
+      function boot() {
+        if (typeof H5PStandalone === "undefined") {
+          document.getElementById("h5p-container").innerHTML =
+            '<p style="padding:1rem;color:#b00">H5P player not found. Make sure the <code>dist/</code> folder exists with <code>main.bundle.js</code> and paths match.</p>';
+          return;
+        }
+        const { H5P } = H5PStandalone;
+        new H5P(document.getElementById("h5p-container"), {
+          h5pJsonPath: "h5p-folder",              // where h5p.json + content/ + libraries/ live
+          frameJs: "dist/frame.bundle.js",
+          frameCss: "dist/styles/h5p.css"
+        });
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
   </script>
 </body>
 </html>

@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game Map</title>
 
-  <!-- silence favicon 404 -->
+  <!-- Silence favicon 404 -->
   <link rel="icon" href="data:,">
 
-  <!-- H5P Standalone assets (must be in /dist) -->
+  <!-- H5P Standalone assets (must exist in /dist) -->
   <link rel="stylesheet" href="dist/styles/h5p.css" />
   <script defer src="dist/main.bundle.js"></script>
 
@@ -26,11 +26,26 @@
       function boot() {
         if (typeof H5PStandalone === "undefined") {
           document.getElementById("h5p-container").innerHTML =
-            '<p style="padding:1rem;color:#b00">H5P player not found. Make sure <code>dist/main.bundle.js</code> exists.</p>';
+            '<p style="padding:1rem;color:#b00">H5P player not found. Check that <code>dist/main.bundle.js</code> exists.</p>';
           return;
         }
 
-        // 1) Start H5P
+        // --- Compute absolute repo base from the main.bundle.js URL ---
+        function repoBase() {
+          // Resolve the script's src to an absolute URL
+          var s = document.querySelector('script[src*="main.bundle.js"]');
+          if (s) {
+            var abs = new URL(s.getAttribute('src'), document.baseURI).href;
+            // Strip "/dist/main.bundle.js" and ensure trailing slash
+            return abs.replace(/\/dist\/main\.bundle\.js(?:\?.*)?$/,'/') ;
+          }
+          // Fallback: current page path with trailing slash
+          return (location.origin + location.pathname).replace(/\/[^\/]*$/,'/') ;
+        }
+        var BASE = repoBase(); // e.g., "https://<user>.github.io/Game-Map-Final/"
+        var CONTENT_BASE = BASE + "h5p-folder/content/"; // absolute
+
+        // --- Start H5P ---
         var container = document.getElementById("h5p-container");
         var H5P = H5PStandalone.H5P;
         new H5P(container, {
@@ -39,77 +54,68 @@
           frameCss: "dist/styles/h5p.css"
         });
 
-        // 2) Rewrite media URLs like src="file-xxxx.jpg" to absolute site paths
-        //    Compute absolute base for this repo (e.g., "/Game-Map-Final/")
-        var basePath = (function () {
-          try { return new URL('.', window.top.location.href).pathname; }
-          catch (e) { return new URL('.', window.location.href).pathname; }
-        })(); // ends with "/"
-
-        var ABS_BASE = basePath + "h5p-folder/content/";
-
+        // --- Rewrite media URLs like src="file-xxxx.jpg" to absolute site paths ---
         function prefixFor(filename) {
           var ext = (filename.split('.').pop() || '').toLowerCase();
-          var img = ['jpg','jpeg','png','gif','webp','svg'];
-          var vid = ['mp4','webm','ogg','mov','m4v'];
-          if (img.indexOf(ext) !== -1) return ABS_BASE + "images/";
-          if (vid.indexOf(ext) !== -1) return ABS_BASE + "videos/";
-          return ABS_BASE; // fallback
+          var imgs = ['jpg','jpeg','png','gif','webp','svg'];
+          var vids = ['mp4','webm','ogg','mov','m4v'];
+          var auds = ['mp3','wav','oga','m4a'];
+          if (imgs.indexOf(ext) !== -1) return CONTENT_BASE + "images/";
+          if (vids.indexOf(ext) !== -1 || auds.indexOf(ext) !== -1) return CONTENT_BASE + "videos/";
+          return CONTENT_BASE; // fallback
         }
 
         function rewrite(root) {
           if (!root || !root.querySelectorAll) return;
 
-          // src / href
-          Array.prototype.forEach.call(
-            root.querySelectorAll('[src^="file-"], source[src^="file-"], a[href^="file-"]'),
-            function (el) {
-              var attr = el.hasAttribute("src") ? "src" : "href";
-              var val = el.getAttribute(attr);
-              if (!val) return;
-              el.setAttribute(attr, prefixFor(val) + val);
-            }
-          );
+          var list = root.querySelectorAll('[src^="file-"], source[src^="file-"], a[href^="file-"]');
+          for (var i = 0; i < list.length; i++) {
+            var el = list[i];
+            var attr = el.hasAttribute("src") ? "src" : "href";
+            var val = el.getAttribute(attr);
+            if (!val) continue;
+            el.setAttribute(attr, prefixFor(val) + val);
+          }
 
-          // poster
-          Array.prototype.forEach.call(
-            root.querySelectorAll('[poster^="file-"]'),
-            function (el) {
-              var val = el.getAttribute("poster");
-              if (!val) return;
-              el.setAttribute("poster", prefixFor(val) + val);
-            }
-          );
+          var posters = root.querySelectorAll('[poster^="file-"]');
+          for (var j = 0; j < posters.length; j++) {
+            var pv = posters[j].getAttribute("poster");
+            if (!pv) continue;
+            posters[j].setAttribute("poster", prefixFor(pv) + pv);
+          }
 
-          // inline CSS background-image: url(file-...)
-          Array.prototype.forEach.call(
-            root.querySelectorAll('[style*="url(file-"]'),
-            function (el) {
-              el.style.backgroundImage = el.style.backgroundImage
-                .replace(/url\((["']?)file-/g, 'url($1' + ABS_BASE + 'file-');
-            }
-          );
+          // inline CSS backgrounds: style="background-image:url(file-...)"
+          var bg = root.querySelectorAll('[style*="url(file-"]');
+          for (var k = 0; k < bg.length; k++) {
+            bg[k].style.backgroundImage = bg[k].style.backgroundImage
+              .replace(/url\((["']?)file-/g, 'url($1' + CONTENT_BASE + 'file-');
+          }
         }
 
-        // run once + watch for H5P DOM changes (and inside its iframes)
-        function attachObservers() {
+        function watchAndRewrite() {
           rewrite(container);
 
-          Array.prototype.forEach.call(container.querySelectorAll("iframe"), function (ifr) {
-            try {
-              var apply = function () { if (ifr.contentDocument) rewrite(ifr.contentDocument); };
-              ifr.addEventListener("load", apply);
-              apply();
-              if (ifr.contentDocument) {
-                new MutationObserver(apply)
-                  .observe(ifr.contentDocument, { childList: true, subtree: true, attributes: true });
-              }
-            } catch (e) { /* cross-origin frames are ignored */ }
-          });
+          // Also handle if H5P uses an iframe
+          var iframes = container.querySelectorAll("iframe");
+          for (var n = 0; n < iframes.length; n++) {
+            (function (ifr) {
+              try {
+                var apply = function () {
+                  if (ifr.contentDocument) rewrite(ifr.contentDocument);
+                };
+                ifr.addEventListener("load", apply);
+                apply();
+                if (ifr.contentDocument) {
+                  new MutationObserver(apply)
+                    .observe(ifr.contentDocument, { childList: true, subtree: true, attributes: true });
+                }
+              } catch (e) { /* cross-origin frames are ignored */ }
+            })(iframes[n]);
+          }
         }
 
-        new MutationObserver(attachObservers).observe(container, { childList: true, subtree: true });
-        attachObservers();
+        new MutationObserver(watchAndRewrite).observe(container, { childList: true, subtree: true });
+        watchAndRewrite();
       }
 
       if (document.readyState === "loading") {

@@ -431,7 +431,7 @@
              },
     "image":  {
                   "alt":  "Game map",
-                  "path":  "map.jpg",
+                  "path":  "images/image.jpg",
                   "mime":  "image/jpeg"
               },
     "hotspots":  [
@@ -445,8 +445,3 @@
                      }
                  ]
 }
-
-
-
-
-

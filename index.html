@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Game Map</title>
+  <link rel="stylesheet" href="./dist/styles/h5p.css" />
+  <script src="./dist/main.bundle.js"></script>
+</head>
+<body>
+  <div id="h5p-container"></div>
+  <script>
+    const { H5P } = H5PStandalone;
+    new H5P(document.getElementById("h5p-container"), {
+      h5pJsonPath: "h5p-folder",
+      frameJs: "./dist/frame.bundle.js",
+      frameCss: "./dist/styles/h5p.css"
+    });
+  </script>
+</body>
+</html>

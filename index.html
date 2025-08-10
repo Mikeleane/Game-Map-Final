@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game Map</title>
 
-  <!-- Silence favicon 404 -->
+  <!-- silence favicon 404 -->
   <link rel="icon" href="data:,">
 
-  <!-- H5P Standalone styles (must be present at /dist/styles/h5p.css) -->
+  <!-- H5P Standalone assets (must be in /dist) -->
   <link rel="stylesheet" href="dist/styles/h5p.css" />
+  <script defer src="dist/main.bundle.js"></script>
 
   <style>
     html, body { height: 100%; margin: 0; }
     #h5p-container { min-height: 100vh; }
   </style>
-
-  <!-- H5P Standalone player -->
-  <script defer src="dist/main.bundle.js"></script>
 </head>
 <body>
   <noscript>Please enable JavaScript to view this H5P.</noscript>
@@ -28,21 +26,97 @@
       function boot() {
         if (typeof H5PStandalone === "undefined") {
           document.getElementById("h5p-container").innerHTML =
-            '<p style="padding:1rem;color:#b00">H5P player not found. Check that <code>dist/main.bundle.js</code> exists and the paths match.</p>';
+            '<p style="padding:1rem;color:#b00">H5P player not found. Make sure <code>dist/main.bundle.js</code> exists.</p>';
           return;
         }
-        const { H5P } = H5PStandalone;
-        const container = document.getElementById("h5p-container");
 
+        // 1) Start H5P
+        var container = document.getElementById("h5p-container");
+        var H5P = H5PStandalone.H5P;
         new H5P(container, {
           h5pJsonPath: "h5p-folder",
           frameJs: "dist/frame.bundle.js",
           frameCss: "dist/styles/h5p.css"
         });
+
+        // 2) Rewrite media URLs like src="file-xxxx.jpg" to absolute site paths
+        //    Compute absolute base for this repo (e.g., "/Game-Map-Final/")
+        var basePath = (function () {
+          try { return new URL('.', window.top.location.href).pathname; }
+          catch (e) { return new URL('.', window.location.href).pathname; }
+        })(); // ends with "/"
+
+        var ABS_BASE = basePath + "h5p-folder/content/";
+
+        function prefixFor(filename) {
+          var ext = (filename.split('.').pop() || '').toLowerCase();
+          var img = ['jpg','jpeg','png','gif','webp','svg'];
+          var vid = ['mp4','webm','ogg','mov','m4v'];
+          if (img.indexOf(ext) !== -1) return ABS_BASE + "images/";
+          if (vid.indexOf(ext) !== -1) return ABS_BASE + "videos/";
+          return ABS_BASE; // fallback
+        }
+
+        function rewrite(root) {
+          if (!root || !root.querySelectorAll) return;
+
+          // src / href
+          Array.prototype.forEach.call(
+            root.querySelectorAll('[src^="file-"], source[src^="file-"], a[href^="file-"]'),
+            function (el) {
+              var attr = el.hasAttribute("src") ? "src" : "href";
+              var val = el.getAttribute(attr);
+              if (!val) return;
+              el.setAttribute(attr, prefixFor(val) + val);
+            }
+          );
+
+          // poster
+          Array.prototype.forEach.call(
+            root.querySelectorAll('[poster^="file-"]'),
+            function (el) {
+              var val = el.getAttribute("poster");
+              if (!val) return;
+              el.setAttribute("poster", prefixFor(val) + val);
+            }
+          );
+
+          // inline CSS background-image: url(file-...)
+          Array.prototype.forEach.call(
+            root.querySelectorAll('[style*="url(file-"]'),
+            function (el) {
+              el.style.backgroundImage = el.style.backgroundImage
+                .replace(/url\((["']?)file-/g, 'url($1' + ABS_BASE + 'file-');
+            }
+          );
+        }
+
+        // run once + watch for H5P DOM changes (and inside its iframes)
+        function attachObservers() {
+          rewrite(container);
+
+          Array.prototype.forEach.call(container.querySelectorAll("iframe"), function (ifr) {
+            try {
+              var apply = function () { if (ifr.contentDocument) rewrite(ifr.contentDocument); };
+              ifr.addEventListener("load", apply);
+              apply();
+              if (ifr.contentDocument) {
+                new MutationObserver(apply)
+                  .observe(ifr.contentDocument, { childList: true, subtree: true, attributes: true });
+              }
+            } catch (e) { /* cross-origin frames are ignored */ }
+          });
+        }
+
+        new MutationObserver(attachObservers).observe(container, { childList: true, subtree: true });
+        attachObservers();
       }
-      document.readyState === "loading"
-        ? document.addEventListener("DOMContentLoaded", boot)
-        : boot();
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
     })();
   </script>
 </body>

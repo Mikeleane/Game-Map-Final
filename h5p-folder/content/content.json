@@ -1,1 +1,447 @@
-{"showTitleScreen":false,"titleScreen":{"titleScreenIntroduction":"<p style=\"text-align:center\"></p>"},"gamemapSteps":{"backgroundImageSettings":{"backgroundColor":"rgb(255, 255, 255)","backgroundImage":{"path":"images/file--b8gR3p8Mgw5ZtHv.jpg","mime":"image/jpeg","copyright":{"license":"U"},"width":52,"height":52}},"gamemap":{"elements":[{"id":"1ebde6f2-5040-4228-9907-6da656b553c5","label":"Encinte La Maquina","content":{"params":{},"dom":{}},"telemetry":{"x":"16.957295876550884","y":"8.039037566422548","width":"4.375","height":"7.777799959863713"},"neighbors":[],"canBeStartStage":true,"time":{},"accessRestrictions":{"allOrAnyRestrictionSet":"any","restrictionSetList":[{"allOrAnyRestriction":"any","restrictionList":[{"restrictionType":"stageProgress","totalScoreGroup":{"totalScoreOperator":"greaterThan"},"stageScoreGroup":{"stageScoreOperator":"before","stageScoreId":"8e6c0882-3cb5-4882-ab3e-ddb2d1288736"},"stageProgressGroup":{"stageProgressOperator":"is","stageProgressValue":"open","stageProgressId":"8e6c0882-3cb5-4882-ab3e-ddb2d1288736"},"timeGroup":{"timeOperator":"before"}}]}]},"contentsList":[{"contentType":{"params":{"interactiveVideo":{"video":{"startScreenOptions":{"title":"Interactive Video","hideStartTitle":false},"textTracks":{"videoTrack":[{"label":"Subtitles","kind":"subtitles","srcLang":"en"}]},"files":[{"path":"videos/file-Jc-8clq6UGiqcRBP.mp4","mime":"video/mp4","copyright":{"license":"U"}}]},"assets":{"interactions":[{"x":42.21977566595573,"y":46.964032098751,"width":10,"height":10,"duration":{"from":5.219,"to":8},"libraryTitle":"Link","action":{"library":"H5P.Link 1.3","params":{"linkWidget":{"protocol":"https://","url":"www.servilingual.com/path-player?courseid=ingles-para-hosteleria-express&unit=684fec7fe8a74e12040b026cUnit"},"title":"La Benvenida"},"subContentId":"f0977f5d-8040-4761-bcc7-d485eb73dd07","metadata":{"contentType":"Link"}},"displayType":"poster","visuals":{"backgroundColor":"rgba(0,0,0,0.5)","boxShadow":true},"pause":false,"buttonOnMobile":false}],"bookmarks":[],"endscreens":[{"time":8.576,"label":"0:08 Submit screen"}]},"summary":{"task":{"library":"H5P.Summary 1.10","params":{"intro":"<p>How are you doing?</p>","summaries":[{"subContentId":"7f0ebcb7-ce3c-45a2-a018-53ace8fce0a1","summary":["<p>Reto conseguido!!!</p>","<p>I'm still working on it</p>"],"tip":""}],"overallFeedback":[{"from":0,"to":100}],"solvedLabel":"Progress:","scoreLabel":"Wrong answers:","resultLabel":"Your result","labelCorrect":"Correct.","labelIncorrect":"Incorrect! Please try again.","alternativeIncorrectLabel":"Incorrect","labelCorrectAnswers":"Correct answers.","tipButtonLabel":"Show tip","scoreBarLabel":"You got :num out of :total points","progressText":"Progress :num of :total"},"subContentId":"d9a7deae-ac62-42a0-a6f5-82bb4b0702b2","metadata":{"contentType":"Summary","license":"U","title":"Untitled Summary","authors":[],"changes":[],"extraTitle":"Untitled Summary"}},"displayAt":3}},"override":{"autoplay":false,"loop":false,"showBookmarksmenuOnLoad":false,"showRewind10":false,"preventSkippingMode":"none","deactivateSound":false},"l10n":{"interaction":"Interaction","play":"Play","pause":"Pause","mute":"Mute, currently unmuted","unmute":"Unmute, currently muted","quality":"Video Quality","captions":"Captions","close":"Close","fullscreen":"Fullscreen","exitFullscreen":"Exit Fullscreen","summary":"Open summary dialog","bookmarks":"Bookmarks","endscreen":"Submit screen","defaultAdaptivitySeekLabel":"Continue","continueWithVideo":"Continue with video","more":"More player options","playbackRate":"Playback Rate","rewind10":"Rewind 10 Seconds","navDisabled":"Navigation is disabled","navForwardDisabled":"Navigating forward is disabled","sndDisabled":"Sound is disabled","requiresCompletionWarning":"You need to answer all the questions correctly before continuing.","back":"Back","hours":"Hours","minutes":"Minutes","seconds":"Seconds","currentTime":"Current time:","totalTime":"Total time:","singleInteractionAnnouncement":"Interaction appeared:","multipleInteractionsAnnouncement":"Multiple interactions appeared.","videoPausedAnnouncement":"Video is paused","content":"Content","answered":"@answered answered","endcardTitle":"@answered Question(s) answered","endcardInformation":"You have answered @answered questions, click below to submit your answers.","endcardInformationOnSubmitButtonDisabled":"You have answered @answered questions.","endcardInformationNoAnswers":"You have not answered any questions.","endcardInformationMustHaveAnswer":"You have to answer at least one question before you can submit your answers.","endcardSubmitButton":"Submit Answers","endcardSubmitMessage":"Your answers have been submitted!","endcardTableRowAnswered":"Answered questions","endcardTableRowScore":"Score","endcardAnsweredScore":"answered","endCardTableRowSummaryWithScore":"You got @score out of @total points for the @question that appeared after @minutes minutes and @seconds seconds.","endCardTableRowSummaryWithoutScore":"You have answered the @question that appeared after @minutes minutes and @seconds seconds.","videoProgressBar":"Video progress","howToCreateInteractions":"Play the video to start creating interactions"}},"library":"H5P.InteractiveVideo 1.27","metadata":{"contentType":"Interactive Video","license":"U","title":"Untitled Interactive Video","authors":[],"changes":[],"extraTitle":"Untitled Interactive Video"},"subContentId":"b1303150-ab70-4b7f-8655-f68e9b52e633"}}],"specialStageExtraLives":1,"specialStageExtraTime":1,"specialStageLinkTarget":"_blank","alwaysVisible":false,"overrideSymbol":false}],"paths":[{"customVisuals":{"colorPath":"rgba(0, 0, 0, 0.7)","pathWidth":"0.2","pathStyle":"dotted"},"from":0,"to":1,"visualsType":"global"},{"customVisuals":{"colorPath":"rgba(0, 0, 0, 0.7)","pathWidth":"0.2","pathStyle":"dotted"},"from":1,"to":2,"visualsType":"global"}]}},"endScreen":{"noSuccess":{"endScreenTextNoSuccess":"<p style=\"text-align:center\"></p>"},"success":{"endScreenTextSuccess":"<p style=\"text-align:center\"></p>"},"overallFeedback":[{"from":0,"to":100}]},"visual":{"stages":{"colorStage":"rgba(250, 223, 10, 0.7)","colorStageLocked":"rgba(153, 0, 0, 0.7)","colorStageCleared":"rgba(0, 130, 0, 0.7)","showScoreStars":"never"},"paths":{"displayPaths":true,"style":{"colorPath":"rgba(0, 0, 0, 0.7)","colorPathCleared":"rgba(0, 130, 0, 0.7)","pathWidth":"0.2","pathStyle":"dotted"}},"misc":{"useAnimation":true}},"audio":{"backgroundMusic":{"muteDuringExercise":true},"ambient":{}},"behaviour":{"enableRetry":true,"enableSolutionsButton":false,"map":{"showLabels":true,"roaming":"complete","fog":"0"}},"l10n":{"start":"Start","continue":"Continue","restart":"Restart","showSolutions":"Show solutions","completedMap":"You have completed the map!","fullScoreButnoLivesLeft":"You have achieved full score, but lost all your lifes!","fullScoreButTimeout":"You have achieved full score, but ran out of time!","confirmFinishHeader":"Finish map?","confirmFinishDialog":"If you finish now, you will not be able to explore the map any longer.","confirmFinishDialogSubmission":"Your score will be submitted.","confirmFinishDialogQuestion":"Do you really want to finish the map?","confirmAccessDeniedHeader":"Stage locked","confirmAccessDeniedDialog":"This stage requires you to meet some goals before it can be opened.","yes":"Yes","no":"No","confirmGameOverHeader":"Game over!","confirmGameOverDialog":"You have lost all your lives. Please try again!","confirmGameOverDialogTimeout":"You have run out of time. Please try again!","confirmTimeoutHeader":"Time out!","confirmTimeoutDialog":"You ran out of time.","confirmTimeoutDialogLostLife":"You ran out of time and lost a life.","confirmScoreIncompleteHeader":"Not full score!","confirmIncompleteScoreDialogLostLife":"You did not achieve full score and lost a life.","confirmFullScoreHeader":"You achieved full score!","confirmFullScoreDialog":"You have collected enough points to finish this map with a full score, but you are free to explore the rest if you wish to. Your score will be submitted once you finish the map.","confirmFullScoreDialogLoseLivesAmendmend":"But beware! You may still lose lives!","ok":"OK","noStages":"No valid stages were set for the map.","settings":"Settings","volumeMusic":"Volume of music","volumeSFX":"Volume of sound effects","restrictionsAllOfLong":"The stage will not be available unless:","restrictionsAnyOfLong":"The stage will not be available unless any of:","restrictionsAllOf":"All of:","restrictionsAnyOf":"Any of:","restrictionTotalScoreLessThan":"You have a total score less than @value.","restrictionTotalScoreEqualTo":"You have a total score equal to @value.","restrictionTotalScoreNotEqualTo":"You have a total score not equal to @value.","restrictionTotalScoreGreaterThan":"You have a total score greater than @value.","restrictionStageScoreLessThan":"You have a score less than @value in stage @label.","restrictionStageScoreEqualTo":"You have a score equal to @value in stage @label.","restrictionStageScoreNotEqualTo":"You have a score not equal to @value in stage @label.","restrictionStageScoreGreaterThan":"You have a score greater than @value in stage @label.","restrictionStageProgressIs":"The progress of stage @label is @value.","restrictionStageProgressIsNot":"Ths progress of stage @label is not @value.","restrictionTimeBefore":"The current time is before @value.","restrictionTimeOn":"The current time is @value.","restrictionTimeNotOn":"The current time is not @value.","restrictionTimeAfter":"The current time is after @value.","unstarted":"not started","opened":"started","completed":"completed","cleared":"completed successfully","missingContent":"No content was set for this stage!"},"a11y":{"buttonFinish":"Finish the map","buttonAudioActive":"Mute audio. Currently unmuted.","buttonAudioInactive":"Unmute audio. Currently muted.","close":"Close","yourResult":"You got @score out of @total points","mapWasOpened":"The map was opened.","mapSolutionsWasOpened":"The map was opened in solutions mode.","startScreenWasOpened":"The title screen was opened.","endScreenWasOpened":"The end screen was opened.","exerciseLabel":". Exercise for @stagelabel","stageButtonLabel":"Stage: @stagelabel","adjacentStageLabel":"Adjacent stage of @stagelabelOrigin: @stagelabelNeighbor","locked":"Locked","cleared":"Cleared","applicationInstructions":"Use space or enter key to activate current stage. Use arrow keys to select adjacent stage. Use space or enter key on adjacent stage to navigate there.","applicationDescription":"Map","movedToStage":"Moved to @stagelabel","stageUnlocked":"Stage @stagelabel was unlocked.","toolbarFallbackLabel":"Game Map","enterFullscreen":"Enter fullscreen mode","exitFullscreen":"Exit fullscreen mode"}}
+﻿{
+    "showTitleScreen":  false,
+    "titleScreen":  {
+                        "titleScreenIntroduction":  "\u003cp style=\"text-align:center\"\u003e\u003c/p\u003e"
+                    },
+    "gamemapSteps":  {
+                         "backgroundImageSettings":  {
+                                                         "backgroundColor":  "rgb(255, 255, 255)",
+                                                         "backgroundImage":  {
+                                                                                 "path":  "images/file--b8gR3p8Mgw5ZtHv.jpg",
+                                                                                 "mime":  "image/jpeg",
+                                                                                 "copyright":  {
+                                                                                                   "license":  "U"
+                                                                                               },
+                                                                                 "width":  52,
+                                                                                 "height":  52
+                                                                             }
+                                                     },
+                         "gamemap":  {
+                                         "elements":  [
+                                                          {
+                                                              "id":  "1ebde6f2-5040-4228-9907-6da656b553c5",
+                                                              "label":  "Encinte La Maquina",
+                                                              "content":  {
+                                                                              "params":  {
+
+                                                                                         },
+                                                                              "dom":  {
+
+                                                                                      }
+                                                                          },
+                                                              "telemetry":  {
+                                                                                "x":  "16.957295876550884",
+                                                                                "y":  "8.039037566422548",
+                                                                                "width":  "4.375",
+                                                                                "height":  "7.777799959863713"
+                                                                            },
+                                                              "neighbors":  [
+
+                                                                            ],
+                                                              "canBeStartStage":  true,
+                                                              "time":  {
+
+                                                                       },
+                                                              "accessRestrictions":  {
+                                                                                         "allOrAnyRestrictionSet":  "any",
+                                                                                         "restrictionSetList":  [
+                                                                                                                    {
+                                                                                                                        "allOrAnyRestriction":  "any",
+                                                                                                                        "restrictionList":  [
+                                                                                                                                                {
+                                                                                                                                                    "restrictionType":  "stageProgress",
+                                                                                                                                                    "totalScoreGroup":  {
+                                                                                                                                                                            "totalScoreOperator":  "greaterThan"
+                                                                                                                                                                        },
+                                                                                                                                                    "stageScoreGroup":  {
+                                                                                                                                                                            "stageScoreOperator":  "before",
+                                                                                                                                                                            "stageScoreId":  "8e6c0882-3cb5-4882-ab3e-ddb2d1288736"
+                                                                                                                                                                        },
+                                                                                                                                                    "stageProgressGroup":  {
+                                                                                                                                                                               "stageProgressOperator":  "is",
+                                                                                                                                                                               "stageProgressValue":  "open",
+                                                                                                                                                                               "stageProgressId":  "8e6c0882-3cb5-4882-ab3e-ddb2d1288736"
+                                                                                                                                                                           },
+                                                                                                                                                    "timeGroup":  {
+                                                                                                                                                                      "timeOperator":  "before"
+                                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                     },
+                                                              "contentsList":  [
+                                                                                   {
+                                                                                       "contentType":  {
+                                                                                                           "params":  {
+                                                                                                                          "interactiveVideo":  {
+                                                                                                                                                   "video":  {
+                                                                                                                                                                 "startScreenOptions":  {
+                                                                                                                                                                                            "title":  "Interactive Video",
+                                                                                                                                                                                            "hideStartTitle":  false
+                                                                                                                                                                                        },
+                                                                                                                                                                 "textTracks":  {
+                                                                                                                                                                                    "videoTrack":  [
+                                                                                                                                                                                                       {
+                                                                                                                                                                                                           "label":  "Subtitles",
+                                                                                                                                                                                                           "kind":  "subtitles",
+                                                                                                                                                                                                           "srcLang":  "en"
+                                                                                                                                                                                                       }
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                },
+                                                                                                                                                                 "files":  [
+                                                                                                                                                                               {
+                                                                                                                                                                                   "path":  "videos/file-Jc-8clq6UGiqcRBP.mp4",
+                                                                                                                                                                                   "mime":  "video/mp4",
+                                                                                                                                                                                   "copyright":  {
+                                                                                                                                                                                                     "license":  "U"
+                                                                                                                                                                                                 }
+                                                                                                                                                                               }
+                                                                                                                                                                           ]
+                                                                                                                                                             },
+                                                                                                                                                   "assets":  {
+                                                                                                                                                                  "interactions":  [
+                                                                                                                                                                                       {
+                                                                                                                                                                                           "x":  42.21977566595573,
+                                                                                                                                                                                           "y":  46.964032098751,
+                                                                                                                                                                                           "width":  10,
+                                                                                                                                                                                           "height":  10,
+                                                                                                                                                                                           "duration":  {
+                                                                                                                                                                                                            "from":  5.219,
+                                                                                                                                                                                                            "to":  8
+                                                                                                                                                                                                        },
+                                                                                                                                                                                           "libraryTitle":  "Link",
+                                                                                                                                                                                           "action":  {
+                                                                                                                                                                                                          "library":  "H5P.Link 1.3",
+                                                                                                                                                                                                          "params":  {
+                                                                                                                                                                                                                         "linkWidget":  {
+                                                                                                                                                                                                                                            "protocol":  "https://",
+                                                                                                                                                                                                                                            "url":  "www.servilingual.com/path-player?courseid=ingles-para-hosteleria-express\u0026unit=684fec7fe8a74e12040b026cUnit"
+                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                         "title":  "La Benvenida"
+                                                                                                                                                                                                                     },
+                                                                                                                                                                                                          "subContentId":  "f0977f5d-8040-4761-bcc7-d485eb73dd07",
+                                                                                                                                                                                                          "metadata":  {
+                                                                                                                                                                                                                           "contentType":  "Link"
+                                                                                                                                                                                                                       }
+                                                                                                                                                                                                      },
+                                                                                                                                                                                           "displayType":  "poster",
+                                                                                                                                                                                           "visuals":  {
+                                                                                                                                                                                                           "backgroundColor":  "rgba(0,0,0,0.5)",
+                                                                                                                                                                                                           "boxShadow":  true
+                                                                                                                                                                                                       },
+                                                                                                                                                                                           "pause":  false,
+                                                                                                                                                                                           "buttonOnMobile":  false
+                                                                                                                                                                                       }
+                                                                                                                                                                                   ],
+                                                                                                                                                                  "bookmarks":  [
+
+                                                                                                                                                                                ],
+                                                                                                                                                                  "endscreens":  [
+                                                                                                                                                                                     {
+                                                                                                                                                                                         "time":  8.576,
+                                                                                                                                                                                         "label":  "0:08 Submit screen"
+                                                                                                                                                                                     }
+                                                                                                                                                                                 ]
+                                                                                                                                                              },
+                                                                                                                                                   "summary":  {
+                                                                                                                                                                   "task":  {
+                                                                                                                                                                                "library":  "H5P.Summary 1.10",
+                                                                                                                                                                                "params":  {
+                                                                                                                                                                                               "intro":  "\u003cp\u003eHow are you doing?\u003c/p\u003e",
+                                                                                                                                                                                               "summaries":  [
+                                                                                                                                                                                                                 {
+                                                                                                                                                                                                                     "subContentId":  "7f0ebcb7-ce3c-45a2-a018-53ace8fce0a1",
+                                                                                                                                                                                                                     "summary":  [
+                                                                                                                                                                                                                                     "\u003cp\u003eReto conseguido!!!\u003c/p\u003e",
+                                                                                                                                                                                                                                     "\u003cp\u003eI\u0027m still working on it\u003c/p\u003e"
+                                                                                                                                                                                                                                 ],
+                                                                                                                                                                                                                     "tip":  ""
+                                                                                                                                                                                                                 }
+                                                                                                                                                                                                             ],
+                                                                                                                                                                                               "overallFeedback":  [
+                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                           "from":  0,
+                                                                                                                                                                                                                           "to":  100
+                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                   ],
+                                                                                                                                                                                               "solvedLabel":  "Progress:",
+                                                                                                                                                                                               "scoreLabel":  "Wrong answers:",
+                                                                                                                                                                                               "resultLabel":  "Your result",
+                                                                                                                                                                                               "labelCorrect":  "Correct.",
+                                                                                                                                                                                               "labelIncorrect":  "Incorrect! Please try again.",
+                                                                                                                                                                                               "alternativeIncorrectLabel":  "Incorrect",
+                                                                                                                                                                                               "labelCorrectAnswers":  "Correct answers.",
+                                                                                                                                                                                               "tipButtonLabel":  "Show tip",
+                                                                                                                                                                                               "scoreBarLabel":  "You got :num out of :total points",
+                                                                                                                                                                                               "progressText":  "Progress :num of :total"
+                                                                                                                                                                                           },
+                                                                                                                                                                                "subContentId":  "d9a7deae-ac62-42a0-a6f5-82bb4b0702b2",
+                                                                                                                                                                                "metadata":  {
+                                                                                                                                                                                                 "contentType":  "Summary",
+                                                                                                                                                                                                 "license":  "U",
+                                                                                                                                                                                                 "title":  "Untitled Summary",
+                                                                                                                                                                                                 "authors":  [
+
+                                                                                                                                                                                                             ],
+                                                                                                                                                                                                 "changes":  [
+
+                                                                                                                                                                                                             ],
+                                                                                                                                                                                                 "extraTitle":  "Untitled Summary"
+                                                                                                                                                                                             }
+                                                                                                                                                                            },
+                                                                                                                                                                   "displayAt":  3
+                                                                                                                                                               }
+                                                                                                                                               },
+                                                                                                                          "override":  {
+                                                                                                                                           "autoplay":  false,
+                                                                                                                                           "loop":  false,
+                                                                                                                                           "showBookmarksmenuOnLoad":  false,
+                                                                                                                                           "showRewind10":  false,
+                                                                                                                                           "preventSkippingMode":  "none",
+                                                                                                                                           "deactivateSound":  false
+                                                                                                                                       },
+                                                                                                                          "l10n":  {
+                                                                                                                                       "interaction":  "Interaction",
+                                                                                                                                       "play":  "Play",
+                                                                                                                                       "pause":  "Pause",
+                                                                                                                                       "mute":  "Mute, currently unmuted",
+                                                                                                                                       "unmute":  "Unmute, currently muted",
+                                                                                                                                       "quality":  "Video Quality",
+                                                                                                                                       "captions":  "Captions",
+                                                                                                                                       "close":  "Close",
+                                                                                                                                       "fullscreen":  "Fullscreen",
+                                                                                                                                       "exitFullscreen":  "Exit Fullscreen",
+                                                                                                                                       "summary":  "Open summary dialog",
+                                                                                                                                       "bookmarks":  "Bookmarks",
+                                                                                                                                       "endscreen":  "Submit screen",
+                                                                                                                                       "defaultAdaptivitySeekLabel":  "Continue",
+                                                                                                                                       "continueWithVideo":  "Continue with video",
+                                                                                                                                       "more":  "More player options",
+                                                                                                                                       "playbackRate":  "Playback Rate",
+                                                                                                                                       "rewind10":  "Rewind 10 Seconds",
+                                                                                                                                       "navDisabled":  "Navigation is disabled",
+                                                                                                                                       "navForwardDisabled":  "Navigating forward is disabled",
+                                                                                                                                       "sndDisabled":  "Sound is disabled",
+                                                                                                                                       "requiresCompletionWarning":  "You need to answer all the questions correctly before continuing.",
+                                                                                                                                       "back":  "Back",
+                                                                                                                                       "hours":  "Hours",
+                                                                                                                                       "minutes":  "Minutes",
+                                                                                                                                       "seconds":  "Seconds",
+                                                                                                                                       "currentTime":  "Current time:",
+                                                                                                                                       "totalTime":  "Total time:",
+                                                                                                                                       "singleInteractionAnnouncement":  "Interaction appeared:",
+                                                                                                                                       "multipleInteractionsAnnouncement":  "Multiple interactions appeared.",
+                                                                                                                                       "videoPausedAnnouncement":  "Video is paused",
+                                                                                                                                       "content":  "Content",
+                                                                                                                                       "answered":  "@answered answered",
+                                                                                                                                       "endcardTitle":  "@answered Question(s) answered",
+                                                                                                                                       "endcardInformation":  "You have answered @answered questions, click below to submit your answers.",
+                                                                                                                                       "endcardInformationOnSubmitButtonDisabled":  "You have answered @answered questions.",
+                                                                                                                                       "endcardInformationNoAnswers":  "You have not answered any questions.",
+                                                                                                                                       "endcardInformationMustHaveAnswer":  "You have to answer at least one question before you can submit your answers.",
+                                                                                                                                       "endcardSubmitButton":  "Submit Answers",
+                                                                                                                                       "endcardSubmitMessage":  "Your answers have been submitted!",
+                                                                                                                                       "endcardTableRowAnswered":  "Answered questions",
+                                                                                                                                       "endcardTableRowScore":  "Score",
+                                                                                                                                       "endcardAnsweredScore":  "answered",
+                                                                                                                                       "endCardTableRowSummaryWithScore":  "You got @score out of @total points for the @question that appeared after @minutes minutes and @seconds seconds.",
+                                                                                                                                       "endCardTableRowSummaryWithoutScore":  "You have answered the @question that appeared after @minutes minutes and @seconds seconds.",
+                                                                                                                                       "videoProgressBar":  "Video progress",
+                                                                                                                                       "howToCreateInteractions":  "Play the video to start creating interactions"
+                                                                                                                                   }
+                                                                                                                      },
+                                                                                                           "library":  "H5P.InteractiveVideo 1.27",
+                                                                                                           "metadata":  {
+                                                                                                                            "contentType":  "Interactive Video",
+                                                                                                                            "license":  "U",
+                                                                                                                            "title":  "Untitled Interactive Video",
+                                                                                                                            "authors":  [
+
+                                                                                                                                        ],
+                                                                                                                            "changes":  [
+
+                                                                                                                                        ],
+                                                                                                                            "extraTitle":  "Untitled Interactive Video"
+                                                                                                                        },
+                                                                                                           "subContentId":  "b1303150-ab70-4b7f-8655-f68e9b52e633"
+                                                                                                       }
+                                                                                   }
+                                                                               ],
+                                                              "specialStageExtraLives":  1,
+                                                              "specialStageExtraTime":  1,
+                                                              "specialStageLinkTarget":  "_blank",
+                                                              "alwaysVisible":  false,
+                                                              "overrideSymbol":  false
+                                                          }
+                                                      ],
+                                         "paths":  [
+                                                       {
+                                                           "customVisuals":  {
+                                                                                 "colorPath":  "rgba(0, 0, 0, 0.7)",
+                                                                                 "pathWidth":  "0.2",
+                                                                                 "pathStyle":  "dotted"
+                                                                             },
+                                                           "from":  0,
+                                                           "to":  1,
+                                                           "visualsType":  "global"
+                                                       },
+                                                       {
+                                                           "customVisuals":  {
+                                                                                 "colorPath":  "rgba(0, 0, 0, 0.7)",
+                                                                                 "pathWidth":  "0.2",
+                                                                                 "pathStyle":  "dotted"
+                                                                             },
+                                                           "from":  1,
+                                                           "to":  2,
+                                                           "visualsType":  "global"
+                                                       }
+                                                   ]
+                                     }
+                     },
+    "endScreen":  {
+                      "noSuccess":  {
+                                        "endScreenTextNoSuccess":  "\u003cp style=\"text-align:center\"\u003e\u003c/p\u003e"
+                                    },
+                      "success":  {
+                                      "endScreenTextSuccess":  "\u003cp style=\"text-align:center\"\u003e\u003c/p\u003e"
+                                  },
+                      "overallFeedback":  [
+                                              {
+                                                  "from":  0,
+                                                  "to":  100
+                                              }
+                                          ]
+                  },
+    "visual":  {
+                   "stages":  {
+                                  "colorStage":  "rgba(250, 223, 10, 0.7)",
+                                  "colorStageLocked":  "rgba(153, 0, 0, 0.7)",
+                                  "colorStageCleared":  "rgba(0, 130, 0, 0.7)",
+                                  "showScoreStars":  "never"
+                              },
+                   "paths":  {
+                                 "displayPaths":  true,
+                                 "style":  {
+                                               "colorPath":  "rgba(0, 0, 0, 0.7)",
+                                               "colorPathCleared":  "rgba(0, 130, 0, 0.7)",
+                                               "pathWidth":  "0.2",
+                                               "pathStyle":  "dotted"
+                                           }
+                             },
+                   "misc":  {
+                                "useAnimation":  true
+                            }
+               },
+    "audio":  {
+                  "backgroundMusic":  {
+                                          "muteDuringExercise":  true
+                                      },
+                  "ambient":  {
+
+                              }
+              },
+    "behaviour":  {
+                      "enableRetry":  true,
+                      "enableSolutionsButton":  false,
+                      "map":  {
+                                  "showLabels":  true,
+                                  "roaming":  "complete",
+                                  "fog":  "0"
+                              }
+                  },
+    "l10n":  {
+                 "start":  "Start",
+                 "continue":  "Continue",
+                 "restart":  "Restart",
+                 "showSolutions":  "Show solutions",
+                 "completedMap":  "You have completed the map!",
+                 "fullScoreButnoLivesLeft":  "You have achieved full score, but lost all your lifes!",
+                 "fullScoreButTimeout":  "You have achieved full score, but ran out of time!",
+                 "confirmFinishHeader":  "Finish map?",
+                 "confirmFinishDialog":  "If you finish now, you will not be able to explore the map any longer.",
+                 "confirmFinishDialogSubmission":  "Your score will be submitted.",
+                 "confirmFinishDialogQuestion":  "Do you really want to finish the map?",
+                 "confirmAccessDeniedHeader":  "Stage locked",
+                 "confirmAccessDeniedDialog":  "This stage requires you to meet some goals before it can be opened.",
+                 "yes":  "Yes",
+                 "no":  "No",
+                 "confirmGameOverHeader":  "Game over!",
+                 "confirmGameOverDialog":  "You have lost all your lives. Please try again!",
+                 "confirmGameOverDialogTimeout":  "You have run out of time. Please try again!",
+                 "confirmTimeoutHeader":  "Time out!",
+                 "confirmTimeoutDialog":  "You ran out of time.",
+                 "confirmTimeoutDialogLostLife":  "You ran out of time and lost a life.",
+                 "confirmScoreIncompleteHeader":  "Not full score!",
+                 "confirmIncompleteScoreDialogLostLife":  "You did not achieve full score and lost a life.",
+                 "confirmFullScoreHeader":  "You achieved full score!",
+                 "confirmFullScoreDialog":  "You have collected enough points to finish this map with a full score, but you are free to explore the rest if you wish to. Your score will be submitted once you finish the map.",
+                 "confirmFullScoreDialogLoseLivesAmendmend":  "But beware! You may still lose lives!",
+                 "ok":  "OK",
+                 "noStages":  "No valid stages were set for the map.",
+                 "settings":  "Settings",
+                 "volumeMusic":  "Volume of music",
+                 "volumeSFX":  "Volume of sound effects",
+                 "restrictionsAllOfLong":  "The stage will not be available unless:",
+                 "restrictionsAnyOfLong":  "The stage will not be available unless any of:",
+                 "restrictionsAllOf":  "All of:",
+                 "restrictionsAnyOf":  "Any of:",
+                 "restrictionTotalScoreLessThan":  "You have a total score less than @value.",
+                 "restrictionTotalScoreEqualTo":  "You have a total score equal to @value.",
+                 "restrictionTotalScoreNotEqualTo":  "You have a total score not equal to @value.",
+                 "restrictionTotalScoreGreaterThan":  "You have a total score greater than @value.",
+                 "restrictionStageScoreLessThan":  "You have a score less than @value in stage @label.",
+                 "restrictionStageScoreEqualTo":  "You have a score equal to @value in stage @label.",
+                 "restrictionStageScoreNotEqualTo":  "You have a score not equal to @value in stage @label.",
+                 "restrictionStageScoreGreaterThan":  "You have a score greater than @value in stage @label.",
+                 "restrictionStageProgressIs":  "The progress of stage @label is @value.",
+                 "restrictionStageProgressIsNot":  "Ths progress of stage @label is not @value.",
+                 "restrictionTimeBefore":  "The current time is before @value.",
+                 "restrictionTimeOn":  "The current time is @value.",
+                 "restrictionTimeNotOn":  "The current time is not @value.",
+                 "restrictionTimeAfter":  "The current time is after @value.",
+                 "unstarted":  "not started",
+                 "opened":  "started",
+                 "completed":  "completed",
+                 "cleared":  "completed successfully",
+                 "missingContent":  "No content was set for this stage!"
+             },
+    "a11y":  {
+                 "buttonFinish":  "Finish the map",
+                 "buttonAudioActive":  "Mute audio. Currently unmuted.",
+                 "buttonAudioInactive":  "Unmute audio. Currently muted.",
+                 "close":  "Close",
+                 "yourResult":  "You got @score out of @total points",
+                 "mapWasOpened":  "The map was opened.",
+                 "mapSolutionsWasOpened":  "The map was opened in solutions mode.",
+                 "startScreenWasOpened":  "The title screen was opened.",
+                 "endScreenWasOpened":  "The end screen was opened.",
+                 "exerciseLabel":  ". Exercise for @stagelabel",
+                 "stageButtonLabel":  "Stage: @stagelabel",
+                 "adjacentStageLabel":  "Adjacent stage of @stagelabelOrigin: @stagelabelNeighbor",
+                 "locked":  "Locked",
+                 "cleared":  "Cleared",
+                 "applicationInstructions":  "Use space or enter key to activate current stage. Use arrow keys to select adjacent stage. Use space or enter key on adjacent stage to navigate there.",
+                 "applicationDescription":  "Map",
+                 "movedToStage":  "Moved to @stagelabel",
+                 "stageUnlocked":  "Stage @stagelabel was unlocked.",
+                 "toolbarFallbackLabel":  "Game Map",
+                 "enterFullscreen":  "Enter fullscreen mode",
+                 "exitFullscreen":  "Exit fullscreen mode"
+             },
+    "image":  {
+                  "alt":  "Game map",
+                  "path":  "map.jpg",
+                  "mime":  "image/jpeg"
+              },
+    "hotspots":  [
+                     {
+                         "position":  {
+                                          "y":  50,
+                                          "x":  50
+                                      },
+                         "header":  "Start",
+                         "content":  "\u003cp\u003eBegin here.\u003c/p\u003e"
+                     }
+                 ]
+}

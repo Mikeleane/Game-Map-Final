@@ -1,46 +1,46 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Game Map</title>
+<script>
+  (function () {
+    function boot() {
+      if (typeof H5PStandalone === "undefined") return;
 
-  <!-- H5P Standalone styles (from /dist) -->
-  <link rel="stylesheet" href="dist/styles/h5p.css" />
+      const { H5P } = H5PStandalone;
+      const container = document.getElementById("h5p-container");
 
-  <style>
-    html, body { height: 100%; margin: 0; }
-    #h5p-container { min-height: 100vh; }
-  </style>
+      new H5P(container, {
+        h5pJsonPath: "h5p-folder",
+        frameJs: "dist/frame.bundle.js",
+        frameCss: "dist/styles/h5p.css"
+      });
 
-  <!-- H5P Standalone player (must exist at dist/main.bundle.js) -->
-  <script defer src="dist/main.bundle.js"></script>
-</head>
-<body>
-  <noscript>Please enable JavaScript to view this H5P.</noscript>
-  <div id="h5p-container"></div>
-
-  <script>
-    (function () {
-      function boot() {
-        if (typeof H5PStandalone === "undefined") {
-          document.getElementById("h5p-container").innerHTML =
-            '<p style="padding:1rem;color:#b00">H5P player not found. Make sure the <code>dist/</code> folder exists with <code>main.bundle.js</code> and paths match.</p>';
-          return;
-        }
-        const { H5P } = H5PStandalone;
-        new H5P(document.getElementById("h5p-container"), {
-          h5pJsonPath: "h5p-folder",              // where h5p.json + content/ + libraries/ live
-          frameJs: "dist/frame.bundle.js",
-          frameCss: "dist/styles/h5p.css"
+      // ---- add this rewrite helper ----
+      const prefix = "h5p-folder/content/";
+      const fixAssets = (root) => {
+        if (!root || !root.querySelectorAll) return;
+        root.querySelectorAll('[src^="file-"], [poster^="file-"]').forEach(el => {
+          const s = el.getAttribute("src");
+          if (s && s.indexOf("file-") === 0) el.setAttribute("src", prefix + s);
+          const p = el.getAttribute("poster");
+          if (p && p.indexOf("file-") === 0) el.setAttribute("poster", prefix + p);
         });
-      }
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", boot);
-      } else {
-        boot();
-      }
-    })();
-  </script>
-</body>
-</html>
+        root.querySelectorAll('a[href^="file-"]').forEach(a => {
+          const h = a.getAttribute("href");
+          if (h && h.indexOf("file-") === 0) a.setAttribute("href", prefix + h);
+        });
+        // <source> tags inside <video>/<audio>
+        root.querySelectorAll('source[src^="file-"]').forEach(s => {
+          const v = s.getAttribute("src");
+          if (v && v.indexOf("file-") === 0) s.setAttribute("src", prefix + v);
+        });
+      };
+
+      // run once and also watch for dynamically added content
+      const mo = new MutationObserver(() => fixAssets(container));
+      mo.observe(container, { subtree: true, childList: true });
+      fixAssets(container);
+      // ---- end rewrite helper ----
+    }
+    document.readyState === "loading"
+      ? document.addEventListener("DOMContentLoaded", boot)
+      : boot();
+  })();
+</script>

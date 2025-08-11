@@ -15,6 +15,14 @@
     html, body { height: 100%; margin: 0; }
     #h5p-container { min-height: 100vh; }
   </style>
+<script>
+      // Compute '/{repo}/' from the current page URL
+      (function(){
+        var p = location.pathname;
+        if (!p.endsWith('/')) p += '/';
+        window.H5P_BASE = p; // e.g. '/Game-Map-Final/'
+      })();
+    </script>
 </head>
 <body>
   <noscript>Please enable JavaScript to view this H5P.</noscript>
@@ -37,9 +45,9 @@
         var H5P = H5PStandalone.H5P;
 
         new H5P(container, {
-          h5pJsonPath: "h5p-folder",
-          frameJs: "dist/frame.bundle.js",
-          frameCss: "dist/styles/h5p.css"
+          h5pJsonPath: window.H5P_BASE + 'h5p-folder',
+          frameJs: window.H5P_BASE + 'dist/frame.bundle.js',
+          frameCss: window.H5P_BASE + 'dist/styles/h5p.css'
         });
 
         // Rewrite src/href/poster/background that start with "file-"
@@ -100,6 +108,7 @@
   </script>
 </body>
 </html>
+
 
 
 

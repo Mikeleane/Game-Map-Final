@@ -305,26 +305,7 @@
           "contentsList": [
             {
               "contentType": {
-                "library": "H5P.SpeakTheWordsSet 1.3",
-                "params": {
-                  "questions": [
-                    {
-                      "question": "Say the word 'greenland'",
-                      "answers": [
-                        "greenland"
-                      ]
-                    }
-                  ]
-                },
-                "subContentId": "db681d8c-0bfd-4bc2-a2be-f1fcffa7c6bb",
-                "metadata": {
-                  "contentType": "Multiple Choice",
-                  "license": "U",
-                  "title": "Untitled Multiple Choice",
-                  "authors": [],
-                  "changes": [],
-                  "extraTitle": "Untitled Multiple Choice"
-                }
+                "metadata": {}
               }
             }
           ],

@@ -1014,56 +1014,19 @@
           "contentsList": [
             {
               "contentType": {
+                "library": "H5P.AdvancedText 1.1",
                 "params": {
-                  "media": {
-                    "disableImageZooming": false
-                  },
-                  "taskDescription": "<p>Racoons and eagles</p>\n",
-                  "overallFeedback": [
-                    {
-                      "from": 0,
-                      "to": 100
-                    }
-                  ],
-                  "checkAnswer": "Check",
-                  "submitAnswer": "Submit",
-                  "tryAgain": "Retry",
-                  "showSolution": "Show solution",
-                  "dropZoneIndex": "Drop Zone @index.",
-                  "empty": "Drop Zone @index is empty.",
-                  "contains": "Drop Zone @index contains draggable @draggable.",
-                  "ariaDraggableIndex": "@index of @count draggables.",
-                  "tipLabel": "Show tip",
-                  "correctText": "Correct!",
-                  "incorrectText": "Incorrect!",
-                  "resetDropTitle": "Reset drop",
-                  "resetDropDescription": "Are you sure you want to reset this drop zone?",
-                  "grabbed": "Draggable is grabbed.",
-                  "cancelledDragging": "Cancelled dragging.",
-                  "correctAnswer": "Correct answer:",
-                  "feedbackHeader": "Feedback",
-                  "behaviour": {
-                    "enableRetry": true,
-                    "enableSolutionsButton": true,
-                    "enableCheckButton": true,
-                    "instantFeedback": false
-                  },
-                  "scoreBarLabel": "You got :num out of :total points",
-                  "a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
-                  "a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
-                  "a11yRetry": "Retry the task. Reset all responses and start the task over again.",
-                  "textField": "North America is home to a diverse range of animals, living in various habitats like forests, deserts, and oceans. One famous animal in North America is the *bald* eagle. The bald eagle is a large bird of prey with a *white* head and a distinctive *yellow* beak. It can be found near rivers and lakes, where it hunts for *fish*. The bald eagle is a symbol of freedom and strength in the United States.\n\nAnother interesting animal in North America is the raccoon. Raccoons are clever and adaptable mammals with a distinctive *mask-like* pattern on their faces. They live in forests and urban areas, often *scavenging* for food in trash cans. Raccoons are known for their *dexterous* paws that they use to grab and manipulate objects. These nocturnal creatures are good climbers and swimmers, making them quite resourceful in their quest for food and shelter."
+                  "text": "<iframe style=\"max-width:100%\" src=\"https://wordwall.net/es/embed/715cab19ab954ff9b976634871ca2182?themeId=4&templateId=70&fontStackId=0\" width=\"500\" height=\"380\" frameborder=\"0\" allowfullscreen></iframe>"
                 },
-                "library": "H5P.DragText 1.10",
                 "metadata": {
-                  "contentType": "Drag the Words",
+                  "contentType": "Advanced text",
                   "license": "U",
-                  "title": "Untitled Drag the Words",
+                  "title": "Wordwall",
                   "authors": [],
                   "changes": [],
-                  "extraTitle": "Untitled Drag the Words"
+                  "extraTitle": "Wordwall"
                 },
-                "subContentId": "33b0b308-b2eb-4da0-b460-42f8f342cf1d"
+                "subContentId": "23ed4894-c390-499b-9689-fbdd7586b613"
               }
             }
           ],

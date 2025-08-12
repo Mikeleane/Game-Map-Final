@@ -128,11 +128,6 @@
                                       "minorVersion":  5
                                   },
                                   {
-                                      "machineName":  null,
-                                      "majorVersion":  null,
-                                      "minorVersion":  null
-                                  },
-                                  {
                                       "machineName":  "H5P.SpeakTheWords",
                                       "majorVersion":  1,
                                       "minorVersion":  5

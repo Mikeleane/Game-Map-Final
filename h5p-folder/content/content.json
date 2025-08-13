@@ -1085,73 +1085,14 @@
           "contentsList": [
             {
               "contentType": {
+                "library": "H5P.AdvancedText 1.1",
                 "params": {
-                  "media": {
-                    "disableImageZooming": false
-                  },
-                  "text": "Fill in the missing words",
-                  "overallFeedback": [
-                    {
-                      "from": 0,
-                      "to": 100
-                    }
-                  ],
-                  "showSolutions": "Show solution",
-                  "tryAgain": "Retry",
-                  "checkAnswer": "Check",
-                  "submitAnswer": "Submit",
-                  "notFilledOut": "Please fill in all blanks to view solution",
-                  "answerIsCorrect": "&#039;:ans&#039; is correct",
-                  "answerIsWrong": "&#039;:ans&#039; is wrong",
-                  "answeredCorrectly": "Answered correctly",
-                  "answeredIncorrectly": "Answered incorrectly",
-                  "solutionLabel": "Correct answer:",
-                  "inputLabel": "Blank input @num of @total",
-                  "inputHasTipLabel": "Tip available",
-                  "tipLabel": "Tip",
-                  "behaviour": {
-                    "enableRetry": true,
-                    "enableSolutionsButton": true,
-                    "enableCheckButton": true,
-                    "autoCheck": false,
-                    "caseSensitive": true,
-                    "showSolutionsRequiresInput": true,
-                    "separateLines": false,
-                    "confirmCheckDialog": false,
-                    "confirmRetryDialog": false,
-                    "acceptSpellingErrors": false
-                  },
-                  "scoreBarLabel": "You got :num out of :total points",
-                  "a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
-                  "a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
-                  "a11yRetry": "Retry the task. Reset all responses and start the task over again.",
-                  "a11yCheckingModeHeader": "Checking mode",
-                  "confirmCheck": {
-                    "header": "Finish ?",
-                    "body": "Are you sure you wish to finish ?",
-                    "cancelLabel": "Cancel",
-                    "confirmLabel": "Finish"
-                  },
-                  "confirmRetry": {
-                    "header": "Retry ?",
-                    "body": "Are you sure you wish to retry ?",
-                    "cancelLabel": "Cancel",
-                    "confirmLabel": "Confirm"
-                  },
-                  "questions": [
-                    "<p>South America is a continent filled with fascinating animals that live in diverse environments like rainforests, grasslands, and mountains. One unique animal is the toucan. Toucans are colorful birds with vibrant *feathers* and large, bright *beaks*. They live in the rainforests of South America and are known for their playful and social behavior. Toucans feed on *fruits* and have a distinctive call that sounds like a croaky \"croak-croak.\"</p>\n\n<p>Another interesting animal in South America is the capybara, the world's largest *rodent*. Capybaras look a bit like giant guinea pigs and are excellent swimmers. They live in groups near water sources and graze on grasses and aquatic plants. Capybaras are friendly and often seen relaxing in the sun or taking a dip in the water to stay cool. Their social nature makes them enjoy being with other capybaras in their close-knit communities.</p>\n"
-                  ]
+                  "text": "<div style=\"text-align:center;\">\n<iframe src=\"https://en.islcollective.com/english-esl-video-lessons/family-verb-to-be-pronouns-possession/1138832\"\n        width=\"800\" height=\"450\" frameborder=\"0\" allowfullscreen style=\"max-width:100%;\"></iframe>\n</div>"
                 },
-                "library": "H5P.Blanks 1.14",
                 "metadata": {
-                  "contentType": "Fill in the Blanks",
-                  "license": "U",
-                  "title": "Untitled Fill in the Blanks",
-                  "authors": [],
-                  "changes": [],
-                  "extraTitle": "Untitled Fill in the Blanks"
-                },
-                "subContentId": "875c92ea-a631-4610-bbfc-7f2f8e3e1d89"
+                  "title": "iSLCollective video",
+                  "license": "U"
+                }
               }
             }
           ],
